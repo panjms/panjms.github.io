@@ -150,6 +150,7 @@ header {
 .postdesc {
     padding: 5% 5% 5% 0%;
     word-wrap: break-word;
+    font-weight: normal;
 }
 
 #mealsposts img {
