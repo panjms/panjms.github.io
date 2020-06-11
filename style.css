@@ -14,7 +14,7 @@
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 h1 {
@@ -52,7 +52,7 @@ header {
     border: none;
     font-size: 17px;
     border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
     background-color: #f2f3f4;
     color: mediumaquamarine;
     text-align: right;
@@ -62,7 +62,7 @@ header {
     padding: 6px;
     background-color: #f2f3f4;
     border: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 #logoinit {
@@ -114,7 +114,7 @@ header {
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 #mealheader {
