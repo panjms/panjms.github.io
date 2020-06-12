@@ -12,6 +12,58 @@
        url('../fonts/open-sans-v17-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
+@media only screen and (max-width: 374px) {
+
+    .post {
+        display: flex;
+        border-bottom: 1px dotted lightgray;
+    }
+    
+    .postimg {
+        max-width: 50%;
+        padding: 2% 3% 2% 0%;
+    }
+
+    .postimg img {
+        width: 94%;
+    }
+
+    .postdesc {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    .post {
+        display: flex;
+        border-bottom: 1px dotted lightgray;
+    }
+    
+    .postimg {
+        max-width: 35%;
+        padding: 2% 3% 2% 0%;
+    }
+
+    .postdesc {
+        padding: 0;   
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #mealsposts, #dessertsposts, #drinksposts {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        column-gap: 4%;
+    }
+
+    .postdesc {
+        padding: 5% 5% 5% 0%;
+    }
+
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans';
@@ -36,16 +88,25 @@ h3 {
 
 header {
     /* background-color: #DCDCDC; */
-    width: 100%;
+    padding: 0 3% 0 3%;
+    width: 94%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.topnav {
+    max-width: 40%;
+}
+
 #searchbar {
     margin-top: 20px;
-    margin-left: 20px;
     margin-bottom: 20px;
+    width: 50%;
+}
+
+#submbut {
+    width: fit-content;
 }
 
 .topnav input[type=text] {
@@ -66,6 +127,7 @@ header {
     border: none;
     font-family: 'Open Sans';
     font-weight: 700;
+    width: 40%;
 }
 
 #logoinit {
@@ -79,7 +141,7 @@ header {
 }
 
 .dropdown {
-    padding-right: 20px;
+    /* padding-right: 20px; */
     display: flex;
     align-items: center;
 }
@@ -136,19 +198,18 @@ header {
     -webkit-transform: rotate(45deg);
   }
 
-#mealsposts  {
+/* #mealsposts  {
     width: 100%;
     display: grid;
     grid-template-columns: 22%  22%  22% 22%;
     column-gap: 4%;
-}
+} */
 
 .post {
     width: 100%;
 }
 
 .postdesc {
-    padding: 5% 5% 5% 0%;
     word-wrap: break-word;
     font-weight: normal;
 }
@@ -177,12 +238,12 @@ header {
     align-items: center;
 }
 
-#dessertsposts {
+/* #dessertsposts {
     width: 100%;
     display: grid;
     grid-template-columns: 22%  22%  22% 22%;
     column-gap: 4%;
-}
+} */
 
 #desserts {
     margin: 0 3% 0% 3%;
@@ -202,12 +263,12 @@ header {
     align-items: center;
 }
 
-#drinksposts  {
+/* #drinksposts  {
     width: 100%;
     display: grid;
     grid-template-columns: 22%  22%  22% 22%;
     column-gap: 4%;
-}
+} */
 
 #drinksposts img {
     width: 100%;
