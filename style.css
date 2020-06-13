@@ -14,6 +14,11 @@
 
 @media only screen and (max-width: 374px) {
 
+    #mealheader, #dessertsheader, #drinksheader {
+        justify-content: space-between;
+        padding-top: 1%;
+    }
+
     .post {
         display: flex;
         border-bottom: 1px dotted lightgray;
@@ -28,12 +33,23 @@
         width: 94%;
     }
 
+    h3 {
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+
     .postdesc {
         padding: 0;
     }
+
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    #mealheader, #dessertsheader, #drinksheader {
+        justify-content: space-between;
+        padding-top: 2%;
+    }
 
     .post {
         display: flex;
@@ -43,6 +59,11 @@
     .postimg {
         max-width: 35%;
         padding: 2% 3% 2% 0%;
+    }
+
+    h3 {
+        margin-top: 7%;
+        margin-bottom: 3%;
     }
 
     .postdesc {
@@ -233,7 +254,7 @@ header {
     border-top: 1px  solid black;
 }
 
-#dessertheader {
+#dessertsheader {
     display: flex;
     align-items: center;
 }
@@ -276,27 +297,113 @@ header {
 
 #videos {
     margin: 0 3% 0 3%;
+    border-top: 1px solid black;
 }
 
-/* .dropwdown {
-    float:left;
-    overflow: hidden;
+#vidsheader {}
+
+footer {
+    background-color: #272727;
+    color: white;
+    padding: 0 1% 0 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9em
 }
 
-.dropdown .drophdr {
-    font-size: 16px;
-    border: none;
-    padding: 14px 16px;
-    background-color:  inherit;
-    font-family: inherit;
-    margin:  0;
+#botnav {
+    width: 40%;
+    max-width: 375px;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
 }
 
-.dropdown-content  {
-    display: n one;
+#botnav a {
+    padding: 0 1.5% 0 1.5%;
+}
+
+footer div {
+    color: white;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) {
+    footer {
+        flex-direction: column;
+        padding-top: 3%;
+    }
+
+    #botnav {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    #botnav a {
+        text-decoration: none;
+    }
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 40%;
+    width: 40%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px  8px  16px  0px rgba(red, green, blue, alpha);
-    z-index: 1;
-} */
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

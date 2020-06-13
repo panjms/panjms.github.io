@@ -10,6 +10,16 @@
 </head>
 
 <body>
+  <div id="mymenu" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">All Categories</a>
+      <a href="#">Recipes</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
   <header>
     <div class="topnav">
         <input type="text" placeholder="Search" id="searchbar"/>
@@ -18,15 +28,19 @@
     <div>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFJsORm06MGAIKRhlJT7109ONdZ4dL99ZPuuzh67_xrING6C7ZKHiveTMP7FY8KEpZj5_DNYA&usqp=CAc" alt="logo" id="logoinit">
     </div>
-    <div class="dropdown">
-      <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Shopping-Cart-Logo-Png-Image-77784-For-Designing-Projects.png" alt="cart" id="shopcart">
-      <button  class="drophdr">Dropdown</button>
-      <!-- <div class="dropwdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div> -->
-    </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      
+      <script>
+      /* Open */
+      function openNav() {
+        document.getElementById("mymenu").style.display = "block";
+      }
+
+      /* Close */
+      function closeNav() {
+        document.getElementById("mymenu").style.display = "none";
+      }
+      </script>
   </header>
 
   <main>
@@ -94,7 +108,7 @@
     </section>
 
     <section id="desserts">
-      <div id="dessertheader">
+      <div id="dessertsheader">
         <h2>Desserts</h2>
         <button class="categdrop">Categories <i class="arrow"></i></button>
       </div>
@@ -219,98 +233,19 @@
     <section id="feedback">
       
     </section>
-    <footer>
-      <div id="botnav">
-
-      </div>
-    </footer>
   </main>
-
-
-  <!-- <main>
-    <section id="hero-section">
-      <div id="hero-image">
-        <img src="http://pngimg.com/uploads/cat/cat_PNG50534.png" alt="hero-image">
-      </div>
-      <div id="hero-text">
-        <h1>Cat.Me</h1>
-        <h2>Feisty Chonkers on Demand</h2>
-        <a href="try.html">
-          <button>Get Started</button>
-        </a>
-      </div>
-    </section>
-
-    <section id="pic-section">
-      <h2>Purrbot Pics</h2>
-      <div id="pic-gallery">
-        <img src="https://24.media.tumblr.com/tumblr_l2p8e9Dzyg1qapjbto1_250.jpg" alt="">
-        <img src="https://25.media.tumblr.com/tumblr_mbp0qguRfT1rnzyn4o1_250.jpg" alt="">
-        <img src="https://25.media.tumblr.com/tumblr_m59bpv2LBG1qh1pmyo1_250.jpg" alt="">
-        <img src="https://25.media.tumblr.com/tumblr_m8o14n0PEX1rw872io1_250.jpg" alt="">
-        <img src="https://24.media.tumblr.com/ZabOTt2mpdqnv2owUUgveHEk_250.jpg" alt="">
-        <img src="https://30.media.tumblr.com/tumblr_m028zgBdup1qjahcpo1_250.jpg" alt="">
-        <img src="https://cdn2.thecatapi.com/images/rCpfoEpQY.jpg" alt="">
-        <img src="https://cdn2.thecatapi.com/images/6IEx-RnLH.jpg" alt="">
-      </div>
-    </section>
-
-    <section id="vid-section">
-      <h2>Fuzzy Videos</h2>
-      <div id="vid-gallery">
-        <div class="video">
-          <div class="video-responsive">
-            <iframe width="909" height="511" src="https://www.youtube.com/embed/JiyMaWOZGoA" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="video">
-          <div class="video-responsive">
-            <iframe width="909" height="511" src="https://www.youtube.com/embed/8cyMWK4ZjT8" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="reviewer">
-        <img src="http://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Free-Download-PNG.png" alt="">
-        <h3>Person McName</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
-      </div>
-      <div class="reviewer">
-        <img src="http://www.pngall.com/wp-content/uploads/2016/04/Happy-Person.png" alt="">
-        <h3>Person McName</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
-      </div>
-      <div class="reviewer">
-        <img src="https://i.dlpng.com/static/png/107366_preview.png" alt="">
-        <h3>Person McName</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
-      </div>
-    </section>
-  </main>
-
   <footer>
-    <h2>Contact Cat.Me</h2>
-    <div id="contact">
-      <p><span class="bold">Email:</span> meow@cat.me</p>
-      <p><span class="bold">Phone:</span> 1-800-cat-meow</p>
-      <p>
-        <span class="bold">HQ:</span>
-        Cat.Me HQ
-        10 E. 21st St. <br>
-        4th floor, Room 4B <br>
-        New York, NY 10010
-      </p>
+    <div id="botnav">
+      <a href="">All Categories</a>
+      <a href="">Site Map</a>
+      <a href="">Images Only</a>
+      <a href="">About</a>
     </div>
-    <small>&copy; Pandas 2019</small>
-  </footer> -->
-
-</body>
-
-</html>
+    <div id="social">
+      <a href=""></a>
+    </div>
+    <div id="me">
+      <p>Copyright &copy; 3001 James Pan</p>
+    </div>
+  </footer>
+  </body>
