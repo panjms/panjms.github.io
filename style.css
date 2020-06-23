@@ -107,7 +107,7 @@ h3 {
     font-size: 1.2em;
 }
 
-a {
+:any-link {
     text-decoration: none;
     color: black;
 }
