@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="recipestyle.css">
+    </head>
+    <body>
+        <div id="mymenu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">All Categories</a>
+              <a href="#">Recipes</a>
+              <a href="#">Features</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+    
+    <header>
+        <div class="topnav">
+            <input type="text" placeholder="Search" id="searchbar"/>
+            <input type="submit" class="corner" value ="submit" id="submbut"/>
+        </div>
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFJsORm06MGAIKRhlJT7109ONdZ4dL99ZPuuzh67_xrING6C7ZKHiveTMP7FY8KEpZj5_DNYA&usqp=CAc" alt="logo" id="logoinit">
+        </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+          
+          <script>
+          /* Open */
+          function openNav() {
+            document.getElementById("mymenu").style.display = "block";
+          }
+    
+          /* Close */
+          function closeNav() {
+            document.getElementById("mymenu").style.display = "none";
+          }
+          </script>
+      </header>
+      <main>
+
+      </main>
+        <script src="" async defer></script>
+    </body>
+</html>

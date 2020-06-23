@@ -107,8 +107,12 @@ h3 {
     font-size: 1.2em;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 header {
-    /* background-color: #DCDCDC; */
     padding: 0 3% 0 3%;
     width: 94%;
     display: flex;
@@ -353,8 +357,8 @@ footer div a {
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 40%;
-    width: 40%;
+    height: 100%;
+    width: 100%;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -369,9 +373,10 @@ footer div a {
   /* Position the content inside the overlay */
   .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
+    top: 10%; /* 25% from the top */
     width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
+    text-align: left; /* Centered text/links */
+    padding-left: 3%;
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
   }
   
@@ -380,7 +385,7 @@ footer div a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: lightgrey;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
   }

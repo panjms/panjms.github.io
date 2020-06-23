@@ -1,0 +1,224 @@
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v17-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+         url('../fonts/open-sans-v17-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/open-sans-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/open-sans-v17-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/open-sans-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/open-sans-v17-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+  }
+
+  @media only screen and (max-width: 374px) {
+
+    h3 {
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+    h3 {
+        margin-top: 7%;
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #intro {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+
+    #title {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        padding-top: 15%;
+    }
+
+    #maintext {
+        padding: 4% 10% 4% 10%;
+    }
+
+    #title p {
+        text-align: right;
+    }
+
+    #servetime {
+        padding-top: 3%;
+    }
+
+    #recipe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #recpic {
+        width: 10%;
+    }
+
+    #recpic img{
+        width: 100%;
+        border-radius: 100%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+p {
+    font-weight: normal;
+}
+
+h1 {
+    text-align: right;
+    font-size: 3.4em;
+    margin: 1% 0;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+
+header {
+    padding: 0 3% 0 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav {
+    max-width: 40%;
+}
+
+#searchbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+#submbut {
+    width: fit-content;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    background-color: #f2f3f4;
+    color: mediumaquamarine;
+    text-align: right;
+}
+
+.topnav input[type=submit] {
+    padding: 6px;
+    background-color: #f2f3f4;
+    border: none;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    width: 40%;
+}
+
+#logoinit {
+    height: 50px;
+    width: 50px;
+}
+
+#intro {
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: rgb(245,245,245);
+}
+
+#titlepic img {
+    width: 100%;
+}
+
+#maintext p {
+    text-align: center;
+}
+
+#postdate {
+    color: #888888;
+    font-style: italic;
+}
+
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    padding-left: 3%;
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: lightgrey;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
