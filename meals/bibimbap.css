@@ -30,43 +30,31 @@
 @media only screen and (min-width: 768px) {
 
     #intro {
+        padding: 3% 0 3% 0;
         display: grid;
         grid-template-columns: 48% 48%;
         column-gap: 4%;
     }
 
-    #title {
+    #blurb {
         /* display: flex;
         flex-direction: column;
-        justify-content: center; */
-        padding-top: 15%;
+        justify-content: center;*/
+        padding-top: 3%;
+        padding-right: 3%;
+        border-right: 1px solid darkgray;
     }
 
     #maintext {
-        padding: 4% 10% 4% 10%;
+        padding: 4% 20% 4% 20%;
     }
 
-    #title p {
+    #blurb p {
         text-align: right;
     }
 
     #servetime {
         padding-top: 3%;
-    }
-
-    #recipe {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #recpic {
-        width: 10%;
-    }
-
-    #recpic img{
-        width: 100%;
-        border-radius: 100%;
     }
 }
 
@@ -84,6 +72,7 @@ h1 {
     text-align: right;
     font-size: 3.4em;
     margin: 1% 0;
+    padding-top: 1%;
 }
 
 h2 {
@@ -94,6 +83,9 @@ h3 {
     font-size: 1.2em;
 }
 
+h4 {
+    font-size: .9em;
+}
 
 header {
     padding: 0 3% 0 3%;
@@ -149,12 +141,100 @@ header {
     background-color: rgb(245,245,245);
 }
 
-#titlepic img {
+#buttons {
+    text-align: right;
+}
+
+#buttons button {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 1.1em;
+}
+
+#blurbpic img {
     width: 100%;
+    max-width: 500px;
 }
 
 #maintext p {
     text-align: center;
+}
+
+
+#recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid black;
+    margin: 0% 3% 0% 3%;
+    padding-top: 2%;
+}
+
+#recpic {
+    width: 10%;
+}
+
+#recpic img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+#ingredients {
+    width: 50%;
+    padding: 1% 0 1% 0;
+}
+
+#instruct {
+
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: none;
+}
+
+ul li {
+    font-weight: normal;
+    padding-left: 1.75em;
+    margin-bottom: .3em;
+    position: relative;
+    list-style-type: none;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+ul li:hover {
+    background: #f2f3f4;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    top: .01rem;
+    left: 0;
+    background-image: url(../Checkbox-unchecked.svg);
+    background-size: 1rem;
+}
+
+ul li.checked {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(../Checkbox-checked.svg);
+}
+
+
+
+
+input[type="checkbox"]:checked + li {
+    opacity: .5;
 }
 
 #postdate {
@@ -163,6 +243,52 @@ header {
 }
 
 
+footer {
+    background-color: #272727;
+    color: white;
+    padding: 0 1% 0 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9em
+}
+
+#botnav {
+    width: 40%;
+    max-width: 375px;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+#botnav a {
+    padding: 0 1.5% 0 1.5%;
+}
+
+footer div {
+    color: white;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) {
+    footer {
+        flex-direction: column;
+        padding-top: 3%;
+    }
+
+    #botnav {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    #botnav a {
+        text-decoration: none;
+    }
+}
 
 /* The Overlay (background) */
 .overlay {

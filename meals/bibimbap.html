@@ -46,7 +46,11 @@
       </header>
       <main>
         <div id="intro">
-            <div id="title">
+            <div id="blurb">
+                <div id="buttons">
+                    <button>&darr; Jump to Recipe</button>
+                    <button>+ Add to Cart</button>
+                </div>
             <h1>Bibimbap</h1>
             <p>A quick and refreshing medley balancing sweet, savory, and spicy. Great for using fridge leftovers!</p>
             <!-- <p id="postdate">Posted: June 22, 2020 </p> -->
@@ -65,7 +69,7 @@
                 </p>
             </div>
             </div>
-            <div id="titlepic">
+            <div id="blurbpic">
                 <img src="../pics/meals/IMG_6696.jpg" alt ="" id="">
             </div>
         </div>
@@ -83,9 +87,123 @@
             <div id="recpic">
             <img src="../pics/meals/IMG_6696.jpg" alt="">
             </div>
+            <div id="ingredients">
+                <ul>
+                    <h3>Useful Tools</h3>
+                    <li>
+                        Mandolin
+                    </li>
+                    <li>
+                        Dolsot (individual sized stoneware for serving)
+                    </li>
+                <h3>Ingredients</h3>
+                    <li>
+                        3 cups white rice
+                    </li>
+                <h4>For the Beef</h4>
+                    <li>
+                        2 tsp sugar
+                    </li>
+                    <li>
+                        2 cloves garlic
+                    </li>
+                    <li>
+                        1 tbsp soy sauce
+                    </li>
+                    <li>
+                        1 tbsp sesame oil
+                    </li>
+                    <li>
+                        1 lb beef (ribeye, sirloin, or brisket)
+                    </li>
+                <h4>Toppings</h4>
+                    <li>
+                        1 large carrot
+                    </li>
+                    <li>
+                        2 medium zucchini
+                    </li>
+                    <li>
+                        1 large cucumber
+                    </li>
+                    <li>
+                        3 cups dried shiitake mushroom
+                    </li>
+                    <li>
+                        3 cups bean sprout
+                    </li>
+                    <li>
+                        1 package pressed tofu
+                    </li>
+                </ul>
+            </div>
+            <div id="instruct">
 
+            </div>
         </div>
       </main>
-        <script src="" async defer></script>
+      <footer>
+        <div id="botnav">
+          <a href="">All Categories</a>
+          <a href="">Site Map</a>
+          <a href="">Images Only</a>
+          <a href="">About</a>
+        </div>
+        <div id="social">
+          <a href=""></a>
+        </div>
+        <div id="me">
+          <p>Copyright &copy; 3001 James Pan</p>
+        </div>
+      </footer>
+    <script>
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+}
+        </script>
     </body>
 </html>
