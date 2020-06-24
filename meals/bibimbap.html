@@ -48,7 +48,7 @@
         <div id="intro">
             <div id="blurb">
                 <div id="buttons">
-                    <button>&darr; Jump to Recipe</button>
+                    <button onclick="scrollToTop()" id="jtorec">&darr; Jump to Recipe</button>
                     <button>+ Add to Cart</button>
                 </div>
             <h1>Bibimbap</h1>
@@ -160,11 +160,19 @@
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 var list = document.querySelector('ul');
+//checks box next to li, makes li less opaque, adds strikethrough//
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
 }, false);
-        </script>
+    </script>
+    <script>
+var elmnt = document.getElementById("recipe");
+
+function scrollToTop() {
+  elmnt.scrollIntoView({ block: 'start',  behavior: 'smooth' }); // Top
+}  
+    </script>
     </body>
 </html>
