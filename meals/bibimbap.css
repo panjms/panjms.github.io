@@ -1,4 +1,6 @@
-/* open-sans-700 - latin */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*open-sans-700 - latin */
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -283,7 +285,7 @@ ul li::before {
     position: absolute;
     height: 1rem;
     width: 1rem;
-    top: .01rem;
+    top: 0.2rem;
     left: 0;
     background-image: url(../Checkbox-unchecked.svg);
     background-size: 1rem;
