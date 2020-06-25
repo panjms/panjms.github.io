@@ -42,7 +42,7 @@
         margin: 1% 8% 1% 8%;
     };
 
-    #ingredients, #instruct {
+    #ingredients, #dir {
         width: 100%;
     }
 }
@@ -75,7 +75,7 @@
         margin: 2% 3% 0 3%;
     }
 
-    #ingredients, #instruct {
+    #ingredients, #dir {
         width: 75%;
     }
 }
@@ -116,7 +116,7 @@
     }
 
 
-    #ingredients, #instruct {
+    #ingredients, #dir {
         width: 50%;
         padding: 1% 0 1% 0;
     }
