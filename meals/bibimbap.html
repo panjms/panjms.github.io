@@ -49,7 +49,7 @@
             <div id="blurb">
                 <div id="buttons">
                     <button onclick="scrollToTop()" id="jtorec">&darr; Jump to Recipe</button>
-                    <button>+ Add to Cart</button>
+                    <button type="submit" id="addtoc">+ Add to Cart</button>
                 </div>
             <h1>Bibimbap</h1>
             <p>A quick and refreshing medley balancing sweet, savory, and spicy. Great for using fridge leftovers!</p>
@@ -74,12 +74,17 @@
             </div>
         </div>
         <div id="maintext">
-            <p>
+            <p id="firstp">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at orci eget purus porta efficitur. Vestibulum consequat nisi dui. Morbi sit amet convallis purus. Pellentesque sed diam ullamcorper metus euismod posuere. Cras cursus, nibh id rhoncus semper, dolor turpis pharetra sem, vel lobortis nulla nibh vitae massa. Ut vel mauris ornare, maximus orci at, tincidunt odio. Nullam dolor nulla, egestas ac erat vitae, mollis venenatis metus. Morbi a hendrerit neque. Vivamus quis sollicitudin arcu. Etiam varius libero ante, et commodo mi ultricies et. Aenean non ex mauris.
-                Etiam molestie sapien vel eleifend faucibus. Proin enim elit, rutrum nec erat at, condimentum pellentesque tortor. Aenean dapibus efficitur volutpat. Aliquam sed elementum orci, eget lacinia mi. Vestibulum eu condimentum lorem, vel commodo diam. Vivamus varius sapien vitae ipsum feugiat, ut ultrices nunc ullamcorper. Nullam a ante eget elit iaculis tempus. Curabitur semper congue molestie. Etiam quis placerat metus.
-                Maecenas hendrerit magna vel leo luctus, vel placerat orci sodales. In nec metus feugiat, tincidunt diam quis, malesuada ligula. Nulla congue, ex vel lacinia luctus, lectus velit rhoncus nibh, at cursus odio leo eu nisi. Pellentesque in enim sed arcu volutpat imperdiet. Duis congue massa eget nunc rutrum, sit amet sollicitudin sem vehicula. Praesent convallis ligula augue, at lobortis libero congue nec. Proin in quam sit amet risus interdum suscipit. Aenean ipsum tellus, interdum a purus sed, cursus placerat diam. Etiam euismod magna in sem luctus, sed malesuada nibh consequat. Etiam viverra maximus augue.
-                Proin vel ullamcorper magna. Donec efficitur urna ut faucibus tempus. Proin iaculis molestie purus eu dictum. Praesent varius quis nunc at sodales. Proin libero augue, facilisis sed fermentum a, consectetur quis diam. Donec semper tempus enim. Integer porta placerat arcu ut rutrum. Praesent in leo pharetra, rutrum nunc at, ornare enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed risus orci, elementum vel varius nec, rhoncus ut nisl. Maecenas malesuada sodales metus, lacinia euismod dolor lobortis ac. Ut sit amet diam ac risus aliquam lacinia.
-                Proin vel nibh ac mi interdum venenatis a ut massa. Praesent iaculis sagittis purus, vitae convallis turpis. Pellentesque consectetur, sem sit amet accumsan elementum, tortor erat elementum justo, vitae molestie nunc ex et lorem. Suspendisse a dolor lacus. Aenean a mauris magna. Mauris nec nisi dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut interdum lectus sed felis tempus, a mattis lorem blandit. Aliquam in sapien vitae odio dapibus finibus quis sed ligula. Sed purus dui, facilisis vel eleifend in, vulputate vitae mi. Suspendisse lacus tellus, viverra at ipsum vitae, rhoncus congue augue. Etiam sapien leo, ultrices vel tortor ut, fringilla pulvinar neque. Suspendisse dapibus ipsum eget sagittis maximus. Vestibulum venenatis nulla nec fermentum suscipit. Pellentesque sollicitudin urna diam, imperdiet convallis velit consectetur et.
+                Etiam molestie sapien vel eleifend faucibus.
+            </p>
+            <p>
+                Proin enim elit, rutrum nec erat at, condimentum pellentesque tortor. Aenean dapibus efficitur volutpat. Aliquam sed elementum orci, eget lacinia mi. Vestibulum eu condimentum lorem, vel commodo diam. Vivamus varius sapien vitae ipsum feugiat, ut ultrices nunc ullamcorper. Nullam a ante eget elit iaculis tempus. Curabitur semper congue molestie. Etiam quis placerat metus.
+                Maecenas hendrerit magna vel leo luctus, vel placerat orci sodales.
+            </p>
+            <p>
+                In nec metus feugiat, tincidunt diam quis, malesuada ligula. Nulla congue, ex vel lacinia luctus, lectus velit rhoncus nibh, at cursus odio leo eu nisi. Pellentesque in enim sed arcu volutpat imperdiet. Duis congue massa eget nunc rutrum, sit amet sollicitudin sem vehicula. Praesent convallis ligula augue, at lobortis libero congue nec. Proin in quam sit amet risus interdum suscipit. Aenean ipsum tellus, interdum a purus sed, cursus placerat diam. Etiam euismod magna in sem luctus, sed malesuada nibh consequat. Etiam viverra maximus augue.
+                Proin vel ullamcorper magna.
             </p>
         </div>
         <div id="recipe">
@@ -89,12 +94,12 @@
             </div>
             <div id="ingredients">
                 <ul>
-                    <h3>Useful Tools</h3>
+                    <h3>Special Equipment</h3>
                     <li>
-                        Mandolin
+                        mandoline
                     </li>
                     <li>
-                        Dolsot (individual sized stoneware for serving)
+                        dolsot (individual sized stoneware for serving)
                     </li>
                 <h3>Ingredients</h3>
                     <li>
@@ -103,6 +108,12 @@
                 <h4>For the Beef</h4>
                     <li>
                         2 tsp sugar
+                    </li>
+                    <li>
+                        1 tsp salt
+                    </li>
+                    <li>
+                        1/2 tsp black pepper
                     </li>
                     <li>
                         2 cloves garlic
@@ -127,7 +138,10 @@
                         1 large cucumber
                     </li>
                     <li>
-                        3 cups dried shiitake mushroom
+                        1 bunch spinach
+                    </li>
+                    <li>
+                        3 cups dried shiitake mushroom (soaked in warm water for at least 30 min to rehydrate)
                     </li>
                     <li>
                         3 cups bean sprout
@@ -135,10 +149,30 @@
                     <li>
                         1 package pressed tofu
                     </li>
+                    <li>1-2 eggs per person</li>
+                    <li>gochujang (to serve with)</li>
+                    <li>diced scallions</li>
                 </ul>
             </div>
             <div id="instruct">
-
+                <h2>Directions</h2>
+                <ol>
+                    <li>
+                        For the beef: <span style="font-weight: normal">Mince the beef or cut into thin slices (depending on preference).  Add minced garlic, salt, black pepper, soy sauce, and sesame oil. Stir to evenly coat. Cover and set aside.</span>
+                    </li>
+                    <li>
+                        For the rice:<span style="font-weight: normal">wash rice and drain. Prepare following instructions as per the rice cooker (or follow guidelines for stovetop methods). Heat dolsot in an oven at 350&deg;F.</span>
+                    </li>
+                    <li>
+                        For the toppings: <span style="font-weight: normal">wash all vegetables and set aside. Peel carrots (and others if desired, but not necessary). Using a mandoline, julienne separately the carrots, zucchini, and cucumbers. Remove mushrooms from water and squeeze to extract excess moisture. Slice thinly. Remove tofu from package, rinse, and dry before slicing into thin strips. Heat oil in a thick bottomed pan over medium-high heat. Sauté the vegetables in batches in the following order: mushroom, zucchini, cucumber, bean sprouts, tofu, carrots, and lastly spinach. In a non-stick pan, heat oil on high to fry eggs sunny-side-up. If desired, raw egg yolk can be separated from the whites and added directly as a topping instead.</span>
+                    </li>
+                    <li>
+                        <span style="font-weight: normal">Using the same pan as for the vegetables, heat oil on high. Brown beef and remove when most of the liquid in the pan is gone, about 3 minutes. Remove from heat and set aside.</span>
+                    </li>
+                    <li>
+                        <span style="font-weight: normal">Remove dolsot from oven. Add rice and top with vegetables and beef. Place fried egg (or raw egg yolk) on top and garnish with gochujang and scallions if desired. Serve immediately.</span>
+                    </li>
+                </ol>
             </div>
         </div>
       </main>
@@ -173,6 +207,24 @@ var elmnt = document.getElementById("recipe");
 function scrollToTop() {
   elmnt.scrollIntoView({ block: 'start',  behavior: 'smooth' }); // Top
 }  
+    </script>
+    <script>
+$("#addtoc").click(function(){
+  var productId = $("#productId").val();
+  var productName = $("#productName").val();
+  var productQuantity = $("#productQuantity").val();
+  var data = {
+    'product_id': productId,
+    'product_name': productName,
+    'quantity': productQuantity
+  };
+
+  $.post("/cart/add", data, showDone);
+ });
+ 
+ var showDone = function() {
+  /* Make something happen here*/
+ }
     </script>
     </body>
 </html>

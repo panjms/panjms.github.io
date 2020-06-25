@@ -12,25 +12,79 @@
          url('../fonts/open-sans-v17-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
   }
 
+
+  /*iphone 5 and smaller*/
   @media only screen and (max-width: 374px) {
 
     h3 {
         margin-top: 10%;
         margin-bottom: 3%;
     }
+
+    #intro {
+        text-align: center;
+    }
+
+    #blurb {
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    #blurb h1 {
+        text-align: center;
+    }
+
+    #maintext {
+        margin: 1% 10% 1% 10%;
+    }
+
+    #recipe {
+        margin: 1% 8% 1% 8%;
+    };
+
+    #ingredients, #instruct {
+        width: 100%;
+    }
 }
 
+/*mobile*/
 @media only screen and (min-width: 375px) and (max-width: 767px) {
     h3 {
         margin-top: 7%;
         margin-bottom: 3%;
     }
+    
+    #intro {
+        text-align: center;
+    }
+
+    #blurb {
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    #blurb h1 {
+        text-align: center;
+    }
+
+    #maintext {
+        margin: 3% 10% 3% 10%;
+    }
+
+    #recipe {
+        margin: 2% 3% 0 3%;
+    }
+
+    #ingredients, #instruct {
+        width: 75%;
+    }
 }
 
+/*ipad landscape and desktops*/
 @media only screen and (min-width: 768px) {
 
     #intro {
-        padding: 3% 0 3% 0;
+        padding: 1% 0 1% 0;
         display: grid;
         grid-template-columns: 48% 48%;
         column-gap: 4%;
@@ -40,13 +94,17 @@
         /* display: flex;
         flex-direction: column;
         justify-content: center;*/
-        padding-top: 3%;
+        padding-top: 2%;
         padding-right: 3%;
         border-right: 1px solid darkgray;
     }
 
     #maintext {
-        padding: 4% 20% 4% 20%;
+        margin: 4% 20% 4% 20%;
+    }
+
+    #recipe {
+        margin: 2% 3% 0 3%;
     }
 
     #blurb p {
@@ -56,8 +114,15 @@
     #servetime {
         padding-top: 3%;
     }
+
+
+    #ingredients, #instruct {
+        width: 50%;
+        padding: 1% 0 1% 0;
+    }
 }
 
+/* shared */
 body {
     margin: 0;
     font-family: 'Open Sans';
@@ -80,10 +145,12 @@ h2 {
 }
 
 h3 {
+    margin: 3% 0 2% 0;
     font-size: 1.2em;
 }
 
 h4 {
+    margin: 3% 0 1.5% 0;
     font-size: .9em;
 }
 
@@ -162,14 +229,17 @@ header {
     text-align: center;
 }
 
+#firstp::first-letter {
+    font-size: 200%;
+    color: orange;
+}
 
 #recipe {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-top: 1px solid black;
-    margin: 0% 3% 0% 3%;
-    padding-top: 2%;
+    margin-bottom: 4%;
 }
 
 #recpic {
@@ -182,22 +252,20 @@ header {
 }
 
 #ingredients {
-    width: 50%;
-    padding: 1% 0 1% 0;
+    border-bottom: 1px dotted darkgray;
 }
 
-#instruct {
-
+li {
+    font-weight: normal;
 }
 
-
+/* Ingredients List*/
 ul {
     list-style-type: none;
-    padding-left: none;
+    padding-left: 0;
 }
 
 ul li {
-    font-weight: normal;
     padding-left: 1.75em;
     margin-bottom: .3em;
     position: relative;
@@ -230,7 +298,16 @@ ul li.checked::before {
     background-image: url(../Checkbox-checked.svg);
 }
 
+/* Directions */
+ol {
+    padding-left: 4%;
+    text-align: left;
+}
 
+ol li {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
 
 
 input[type="checkbox"]:checked + li {
