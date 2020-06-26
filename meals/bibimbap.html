@@ -32,8 +32,19 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFJsORm06MGAIKRhlJT7109ONdZ4dL99ZPuuzh67_xrING6C7ZKHiveTMP7FY8KEpZj5_DNYA&usqp=CAc" alt="logo" id="logoinit">
             </a>
         </div>
+        <div>
+        <div class="listdrop">
+            <button onclick="showShopList()" class="shoplistbutton"></button>
+            <div id="listdropdown" class="listdropdown-cont">
+              <a href="">1</a>
+              <a href="">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+            </div>
+            </div>
+
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-          
+          </div>
           <script>
           /* Open */
           function openNav() {
@@ -227,6 +238,26 @@ $("#addtoc").click(function(){
  var showDone = function() {
   /* Make something happen here*/
  }
+    </script>
+    <script>
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function showShopList() {
+  document.getElementById("listdropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) { 
+  if (!event.target.matches('.shoplistbutton')) {
+    var dropdownslist = document.getElementsByClassName("listdropdown-cont");
+    var i;
+    for (i = 0; i < dropdownslist.length; i++) {
+      var openDropdownlist = dropdownslist[i];
+      if (openDropdownlist.classList.contains('show')) {
+        openDropdownlist.classList.remove('show');
+      }
+    }
+  }
+}
     </script>
     </body>
 </html>

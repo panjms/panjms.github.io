@@ -189,7 +189,9 @@ header {
     margin: 0 3% 0 3%;
 }
 
-/* category drop down buttons*/
+
+
+/*drop down buttons*/
 
 .mealsbutton, .dessertsbutton, .drinksbutton {
     height: 100%;  
@@ -200,12 +202,22 @@ header {
     font-weight: 700;
 }
 
-.mealsdrop, .dessertsdrop, .drinksdrop {
+.shoplistbutton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    position: relative;
+    top: 0.3em;
+    background-image: url(iconcart.png);
+}
+
+.mealsdrop, .dessertsdrop, .drinksdrop, .listdrop {
     position: relative;
     display: inline-block;
 }
 
-.mealsdropdown-cont, .dessertsdropdown-cont, .drinksdropdown-cont {
+.mealsdropdown-cont, .dessertsdropdown-cont, .drinksdropdown-cont, .listdropdown-cont {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -213,9 +225,13 @@ header {
     overflow: auto;
     box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+}
 
-.mealsdropdown-cont a, .dessertsdropdown-cont a, .drinksdropdown-cont a {
+.listdropdown-cont {
+    right: 0;
+}
+
+.mealsdropdown-cont a, .dessertsdropdown-cont a, .drinksdropdown-cont a, .listdropdown-cont a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
