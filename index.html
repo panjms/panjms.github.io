@@ -26,7 +26,9 @@
         <input type="submit" class="corner" value ="submit" id="submbut"/>
     </div>
     <div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFJsORm06MGAIKRhlJT7109ONdZ4dL99ZPuuzh67_xrING6C7ZKHiveTMP7FY8KEpZj5_DNYA&usqp=CAc" alt="logo" id="logoinit">
+      <a href="index.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFJsORm06MGAIKRhlJT7109ONdZ4dL99ZPuuzh67_xrING6C7ZKHiveTMP7FY8KEpZj5_DNYA&usqp=CAc" alt="logo" id="logoinit">
+      </a>
     </div>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       
@@ -52,7 +54,15 @@
       <h1>Recipes and Features</h1>
       <div id="mealheader">
         <h2>Meals</h2>
-        <button class="categdrop">Categories <i class="arrow"></i></button>
+        <div class="mealsdrop">
+        <button onclick="mealsCateg()" class="mealsbutton">Categories <i class="arrow"></i></button>
+        <div id="mealscateg" class="mealsdropdown-cont">
+          <a href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+        </div>
+        </div>
       </div>
       <div id="mealsposts">
         <div class="post">
@@ -118,8 +128,16 @@
     <section id="desserts">
       <div id="dessertsheader">
         <h2>Desserts</h2>
-        <button class="categdrop">Categories <i class="arrow"></i></button>
-      </div>
+        <div class="dessertsdrop">
+          <button onclick="dessertsCateg()" class="dessertsbutton">Categories <i class="arrow"></i></button>
+          <div id="dessertscateg" class="dessertsdropdown-cont">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+          </div>
+          </div>
+        </div>
       <div id="dessertsposts">
         <div class="post">
           <div class="postimg">
@@ -176,7 +194,15 @@
     <section id="drinks">
       <div id="drinksheader">
         <h2>Drinks</h2>
-        <button class="categdrop">Categories <i class="arrow"></i></button>
+        <div class="drinksdrop">
+          <button onclick="drinksCateg()" class="drinksbutton">Categories <i class="arrow"></i></button>
+          <div id="drinkscateg" class="drinksdropdown-cont">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+          </div>
+          </div>
       </div>
       <div id="drinksposts">
         <div class="post">
@@ -256,4 +282,56 @@
       <p>Copyright &copy; 3001 James Pan</p>
     </div>
   </footer>
+
+  <script>
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function mealsCateg() {
+  document.getElementById("mealscateg").classList.toggle("show");
+}
+
+function dessertsCateg() {
+  document.getElementById("dessertscateg").classList.toggle("show");
+}
+
+function drinksCateg() {
+  document.getElementById("drinkscateg").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) { 
+  if (!event.target.matches('.mealsbutton')) {
+    var dropdownsmeals = document.getElementsByClassName("mealsdropdown-cont");
+    var i;
+    for (i = 0; i < dropdownsmeals.length; i++) {
+      var openDropdownmeals = dropdownsmeals[i];
+      if (openDropdownmeals.classList.contains('show')) {
+        openDropdownmeals.classList.remove('show');
+      }
+    }
+  }
+
+  if (!event.target.matches('.dessertsbutton')) {
+    var dropdownsdesserts = document.getElementsByClassName("dessertsdropdown-cont");
+    var i;
+    for (i = 0; i < dropdownsdesserts.length; i++) {
+      var openDropdowndesserts = dropdownsdesserts[i];
+      if (openDropdowndesserts.classList.contains('show')) {
+        openDropdowndesserts.classList.remove('show');
+      }
+    }
+  }
+
+  if (!event.target.matches('.drinksbutton')) {
+    var dropdownsdrinks = document.getElementsByClassName("drinksdropdown-cont");
+    var i;
+    for (i = 0; i < dropdownsdrinks.length; i++) {
+      var openDropdowndrinks = dropdownsdrinks[i];
+      if (openDropdowndrinks.classList.contains('show')) {
+        openDropdowndrinks.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+
   </body>
