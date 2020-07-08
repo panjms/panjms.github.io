@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+  /*iphone 5 and smaller*/
+  @media only screen and (max-width: 374px) {
+
+    h3 {
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+
+    #intro {
+        text-align: center;
+    }
+
+    #blurb {
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    #blurb h1 {
+        text-align: center;
+    }
+
+    #maintext {
+        margin: 1% 10% 1% 10%;
+    }
+
+    #recipe {
+        margin: 1% 8% 1% 8%;
+    };
+
+    #ingredients, #dir {
+        width: 100%;
+    }
+}
+
+/*mobile*/
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+    h3 {
+        margin-top: 7%;
+        margin-bottom: 3%;
+    }
+    
+    #intro {
+        text-align: center;
+    }
+
+    #blurb {
+        text-align: center;
+        padding-top: 5%;
+    }
+    
+    #blurb h1 {
+        text-align: center;
+    }
+
+    #maintext {
+        margin: 3% 10% 3% 10%;
+    }
+
+    #recipe {
+        margin: 2% 3% 0 3%;
+    }
+
+    #ingredients, #dir {
+        width: 75%;
+    }
+}
+
+/*ipad landscape and desktops*/
+@media only screen and (min-width: 768px) {
+
+    #intro {
+        padding: 1% 0 1% 0;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+
+    #blurb {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;*/
+        padding-top: 2%;
+        padding-right: 3%;
+        border-right: 1px solid darkgray;
+    }
+
+    #maintext {
+        margin: 4% 20% 4% 20%;
+    }
+
+    #recipe {
+        margin: 2% 3% 0 3%;
+    }
+
+    #blurb p {
+        text-align: right;
+    }
+
+    #servetime {
+        padding-top: 3%;
+    }
+
+
+    #ingredients, #dir {
+        width: 50%;
+        padding: 1% 0 1% 0;
+    }
+}
+
+/* shared */
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+p {
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Open Sans';
+    text-align: right;
+    font-size: 3.4em;
+    margin: 1% 0;
+    padding-top: 1%;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    margin: 3% 0 2% 0;
+    font-size: 1.2em;
+}
+
+h4 {
+    margin: 3% 0 1.5% 0;
+    font-size: .9em;
+}
+
+header {
+    padding: 0 3% 0 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav {
+    max-width: 40%;
+}
+
+#searchbar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+#submbut {
+    width: fit-content;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    background-color: #f2f3f4;
+    color: mediumaquamarine;
+    text-align: right;
+}
+
+.topnav input[type=submit] {
+    padding: 6px;
+    background-color: #f2f3f4;
+    border: none;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    width: 40%;
+}
+
+#logoinit {
+    height: 50px;
+    width: 50px;
+}
+
+.shoplistbutton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    position: relative;
+    top: 0.3em;
+    border-radius: 5px;
+    background-image: url(../iconcart.png);
+}
+
+.listdrop {
+    position: relative;
+    display: inline-block;
+}
+
+.listdropdown-cont {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0 ;
+    z-index: 1;
+  }
+
+.listdropdown-cont a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+
+#intro {
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: rgb(245,245,245);
+}
+
+#buttons {
+    text-align: right;
+}
+
+#buttons button {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 1.1em;
+}
+
+#blurbpic img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#maintext p {
+    text-align: center;
+}
+
+#firstp::first-letter {
+    font-size: 200%;
+    color: orange;
+}
+
+#recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid black;
+    margin-bottom: 4%;
+}
+
+#recpic {
+    width: 10%;
+}
+
+#recpic img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+#ingredients {
+    border-bottom: 1px dotted darkgray;
+}
+
+li {
+    font-weight: normal;
+}
+
+/* Ingredients List*/
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding-left: 1.75em;
+    margin-bottom: .3em;
+    position: relative;
+    list-style-type: none;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+ul li:hover {
+    background: #f2f3f4;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    top: 0.2rem;
+    left: 0;
+    background-image: url(../Checkbox-unchecked.svg);
+    background-size: 1rem;
+}
+
+ul li.checked {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(../Checkbox-checked.svg);
+}
+
+/* Directions */
+ol {
+    padding-left: 4%;
+    text-align: left;
+}
+
+ol li {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+
+input[type="checkbox"]:checked + li {
+    opacity: .5;
+}
+
+#postdate {
+    color: #888888;
+    font-style: italic;
+}
+
+
+footer {
+    background-color: #272727;
+    color: white;
+    padding: 0 1% 0 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9em
+}
+
+#botnav {
+    width: 40%;
+    max-width: 375px;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+#botnav a {
+    padding: 0 1.5% 0 1.5%;
+}
+
+footer div {
+    color: white;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) {
+    footer {
+        flex-direction: column;
+        padding-top: 3%;
+    }
+
+    #botnav {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+
+    #botnav a {
+        text-decoration: none;
+    }
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    padding-left: 3%;
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: lightgrey;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
